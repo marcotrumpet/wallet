@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 
-class DioInstance {
+class DioClient {
   final _dioInstance = Dio();
 
-  Dio get dioInstance => _dioInstance..interceptors.addAll([]);
+  Dio get instance => _dioInstance..interceptors.addAll([]);
 }

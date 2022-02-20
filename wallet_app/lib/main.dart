@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import 'package:wallet/services/network/dio_instance.dart';
+import 'package:wallet/services/exchange_api_provider/exchanges_api_provider.dart';
 import 'package:wallet/wallet_configuration.dart';
 
 void main() {
@@ -14,7 +14,7 @@ void main() {
 void _initializeDependencies() {
   final getIt = GetIt.instance;
 
-  getIt.registerSingleton<DioInstance>(DioInstance());
+  getIt.registerSingleton<ExchangesApiProvider>(ExchangesApiProvider());
 
   getIt.allReady();
 }
